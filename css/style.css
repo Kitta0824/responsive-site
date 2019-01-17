@@ -14,7 +14,7 @@ body {
   background-color: #fdfcf6; }
   
 .top {
-  background-image: ("images/img_top.jpg") ;
+  background-image: url("images/img_top.jpg") ;
   height: 500px;
   width: 100%;
   background-size: cover;
@@ -27,7 +27,6 @@ body {
 
 .text-center2 {
   text-align: center;
-  border: 0.5px solid #4F4F4E;
   background-color: #E88F09; }
   
 .text-center3 {
@@ -36,9 +35,8 @@ body {
   background-color: #bea300; }
   
 .text-center4 {
-  text-align: center;
+  text-align: left;
   padding: 20px;
-  border: 0.5px solid #4F4F4E;
   background-color: #fdf5e6; }
 
 /* Layout縦に並べてる？
@@ -77,6 +75,7 @@ body {
     color: #4c4c4c; }
 
 header .site-title {
+  margin:30px;
   font-size: 1.8rem;
   line-height: normal; }
   header .site-title span {
@@ -88,17 +87,17 @@ header .site-title {
 /* Contents
 ------------------------------------------------------------*/
 section {
-  padding: 50px 0;}
+  padding-top: 50px;}
   section .container {
     width: 90%; }
   section h2 {
     font-size: 3.2rem; }
 
-#skills {margin-top: 700px;}
+#skills {margin-top: 800px;}
   #skills .container {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;}
+  display: flex;
+  flex-direction: row;
+}
 
   #skills .skill-box {
     -webkit-flex: 1;
@@ -106,22 +105,30 @@ section {
     text-align: center;
     margin: 3%;
     border: 1px solid #4F4F4E;
-    background-color: #fdfcf6;}
+    background-color: #fdf5e6;}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
 
   #skills h3 {
     color: #ffffff;
     font-size: 2.4rem;
     font-weight: bold; }
 
-@media (min-width: 1025px) {
+  /* Base
+  ------------------------------------------------------------*/
   a:hover {
-    text-decoration: underline; }
-
+    text-decoration: underline; } }
   /* Header
   ------------------------------------------------------------*/
   .button-contact:hover, .button-contact:active {
     background-color: #4c4c4c;
     color: #FFF; } }
+#contact
+  {text-align: center;}
 #contact ul {
   text-align: center;
   background-color: #bea300; }
@@ -140,9 +147,10 @@ section {
       margin-right: 0; }
   #contact ul a {
     display: block;
-    width: 50px;
+    width: 300px;
     height: 50px;
     color: #FFF;
+    text-align: center;
     background-color: #14c0c9;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
